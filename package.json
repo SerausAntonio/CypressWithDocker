@@ -4,7 +4,12 @@
   "description": "Cypress v12 + Docker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "open": "cypress open",
+    "test-electron": "cypress run --headed --browser electron",
+    "smoke-test": "cypress run --spec 'cypress\\e2e\\smokeTest\\*.cy.js\\'",
+    "test-electron-headed": "cypress run --headed",
+    "test-chrome": "cypress run --browser chrome",
+    "test-chrome-headed": "cypress run --browser chrome --headed"
   },
   "repository": {
     "type": "git",
