@@ -23,7 +23,7 @@ describe('Dropdown Functionality',()=>{
         cy.visit('https://demo.mobiscroll.com/select/multiple-select');
         cy.get('.demo-description-title').contains('Multiple select');
         cy.get('.mbsc-textfield-tags').should('be.visible');
-        cy.get('#multiple-select-select').invoke('attr','style', 'display:none').select('4');
+        cy.get('#multiple-select-select').invoke('attr','style', 'display:none').select('4',{force:true});
        // cy.get('[option[value="4"]').click();
      //   cy.contains('Health & Beauty').click();
     }
