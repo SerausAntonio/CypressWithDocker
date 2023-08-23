@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('LogMeIn',(email, password)=>{
+
+    cy.visit("https://react-redux.realworld.io/");
+    cy.contains('Sign in').click();
+    cy.get('input[type="email"]').type(email);
+    cy.get('input[type="password"]').type(password);
+    cy.get('button[type="submit"]').click();
+    
+})
+Cypress.Commands.add('LogMeOut',()=>{
+
+     cy.contains('Settings').click();
+     cy.contains('Or click here to logout.').click();
+
+})
